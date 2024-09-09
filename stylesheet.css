@@ -1,0 +1,248 @@
+/* reset margin and padding on all elements  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1-5;
+}
+/*--------HEADER AND NAVIGATION---------*/
+.header-container{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    margin-top: 20px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.logo-container{
+    text-align: center;
+    margin-left: 10px;
+
+}
+.navigation-links{
+    display: flex;
+    gap: 15px;
+    margin-right: 10px; 
+}
+.navigation-links a {
+    text-decoration: none;
+    color: black;
+}
+.navigation-links a:hover {
+    text-decoration: underline;
+}
+/*banne section*/
+.banner{
+    display: block;
+    padding-top: 50px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+/*mood section*/
+.mood-container{
+    position: relative;
+    background-image: url(pictures/magaluf-beach.jpg);
+    height: 60vh;/*means that image 60 percent*/
+    background-position:center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mood-box{
+    position: absolute;
+    width: 360px;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%) ;
+    background-color: white;
+    padding: 10px 20px 15px;
+    border: 1px solid#ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0,0, 1);
+}
+/*travel tips-------*/
+.travel-tips-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.travel-tips-image{
+height: 218px;
+}
+.travel-tips-accourdion{
+    width: 300px;
+}
+summary {
+    cursor: pointer;
+    background-color: #f6f6f6;
+    color: gray;
+    box-shadow: 0 2px 4px rgba(0, 0,0, 1);
+    padding: 8px;
+    margin-bottom: 4px;
+}
+details div{
+    padding: 32px 16px;
+    border: 1px solid white;
+    border-radius: 3px;
+    margin-bottom: 2px;
+    width: 370px;
+}
+/*---travel tips end*/
+.option-container{
+    background-color: #f9f9f9;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin-top: 80px;
+}
+.option-header{
+    text-align: center;
+}
+.option-card{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 3px 4px rgba(0, 0,0, 1);
+    padding: 20px;
+    margin: 10px;
+}
+.option-card:nth-child(3){
+    flex-direction: row-reverse;
+}
+.option-image{
+    width: 300px;
+    border: 4px;
+}
+.option-card-content{
+    margin-top: 10px;
+    width: 300px;
+}
+.option-card p{
+    color:#6b6a6a
+}
+.option-card:hover{
+transform: translate(-5px);
+transition: transform(0.3s ease);
+}
+/*travel options end*/
+.testimonials{
+margin-top: 80px;
+text-align:center;
+
+}
+.testimonial-container{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.testimonial-card{
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    text-align:center;
+    box-shadow: 02px 4px rgba(0, 0,0, 1);
+}
+.testimonial-card img{
+    border-radius: 50%;
+    margin-bottom: 10px;
+    height: 100px;
+}
+.testimonial-text{
+   margin-bottom: 10px;     
+}
+/*----------------end*/
+.user-name{
+    font-weight: bold;
+}
+.job-position{
+    color: #888;
+}
+.newsletter {
+    margin-top: 80px;
+}
+.newsletter-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.newsletter-signup-form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+}
+.newsletterLabel{
+    display: none;
+}
+.newsletter-signup-form input[type="email"]{
+    width: 250px;
+    padding: 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.subscribebutton{
+    width: 250px;
+    padding: 15px;
+    background-color: blue;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+/*------------FAT FOOTER-----------*/
+.fat-footer{
+    margin-top:80px;
+    background-color: #f9f9f9;
+}
+.fat-footer-container{
+    display: flex;/*children behaves like a flex box*/
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap: 10px;
+}
+/*=--------fat footer end---------*/
+@media screen and (min-width: 600px) 
+{
+    .option-container{
+    max-width: 800px;
+    margin: 0 auto;
+    }  
+}
+.contact-info,
+.about-us,
+.footer-links{
+    width: 250px;
+    
+}
+.footer-links ul{
+    list-style: none;
+}
+.footer-links a{
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+/*MEDIA QUEIRIES*/
+@media screen and (min-width: 900px){
+    .fat-footer-container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .travel-tips-container{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .header-container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
